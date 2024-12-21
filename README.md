@@ -1,1 +1,1 @@
-empty
+# Method to create these shortcut
