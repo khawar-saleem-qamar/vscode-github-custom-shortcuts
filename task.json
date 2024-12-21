@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello"
+        },
+        {
+            "label": "Upload to Git",
+            "type": "shell",
+            "command": "uploadtogit",
+            "args": [
+                "\"${input:commitMessage}\""
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Initiate Git",
+            "type": "shell",
+            "command": "initiategit",
+            "args": [
+                "${input:gitOrigin}",
+                "\"${input:commitMessage}\""
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "gitOrigin",
+            "type": "promptString",
+            "description": "Enter the Git origin URL"
+        },
+        {
+            "id": "commitMessage",
+            "type": "promptString",
+            "description": "Enter the commit message"
+        }
+    ]
+}

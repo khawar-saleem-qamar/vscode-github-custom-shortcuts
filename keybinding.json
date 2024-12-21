@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+alt+z",  // Replace with your preferred shortcut
+        "command": "workbench.action.tasks.runTask",
+        "args": "Upload to Git"
+    },
+    {
+        "key": "ctrl+alt+g",  // Replace with your preferred shortcut
+        "command": "workbench.action.tasks.runTask",
+        "args": "Initiate Git"
+    }
+]
